@@ -1,4 +1,8 @@
+# Data directories
 data/raw_videos/
+data/annotations/
+data/data_augmentation/
+data/extracted_frames/
 dev_docs/
 
 # Python-related files

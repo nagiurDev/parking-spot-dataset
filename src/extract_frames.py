@@ -155,13 +155,13 @@ def extract_frames_on_motion(raw_video_path: str, output_path: str, exist_extrac
 
         # Extract frame if motion is detected continuously for the minimum required frames
         if motion_frame_count >= min_motion_frames:
-            frame_name = f"{video_name}_{frame_id:04d}_0.jpg"
+            frame_name = f"{video_name}_{frame_id:05d}_{extracted_count:04d}.jpg"
             frame_path = os.path.join(output_dir, frame_name)
 
             # Ensure that duplicate frame names are avoided
             counter = 1
             while os.path.exists(frame_path):
-                frame_name = f"{video_name}_{frame_id:04d}_{counter}.jpg"
+                frame_name = f"{video_name}_{extracted_count:04d}_{counter}.jpg"
                 frame_path = os.path.join(output_dir, frame_name)
                 counter += 1
 
